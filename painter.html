@@ -13,7 +13,8 @@
         <input type ="text" id="check" name="form_check" min=10 max=50 step=2> <br>
         <input type="button" onclick="checkPainter()" value="Check the guess">
     </form>
-    <p id="result">Result </p>
+    <p>Good guesses: <span id="good">0</span></p>
+    <p>Oops: <span id="oops">0</span></p> 
     <script> 
     var good=0
     var oops=0
@@ -31,8 +32,9 @@
             oops=oops+1
             alert('Sorry')
         }
-        out.innerHTML ="Right count: " +good+" Wrong count: "+oops
-    }
+
+              document.getElementById("good").innerHTML = good;
+              document.getElementById("oops").innerHTML = oops;    }
     </script>
     
     </body>
